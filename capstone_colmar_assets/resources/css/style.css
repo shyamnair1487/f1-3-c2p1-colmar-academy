@@ -1,0 +1,412 @@
+/**** General *******/
+
+html, body {
+  font-size: 16px;
+  color: 	#555555;
+}
+
+.container {
+  margin-left: 24px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+
+}
+
+.image {
+  width: 60%;
+}
+
+.image img {
+  width: 100%;
+}
+
+.image video {
+  width: 100%;
+}
+
+.description {
+  width: 40%;
+  margin-left: 24px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 8px;
+}
+
+.info {
+  display: flex;
+}
+.pic {
+  width: 35%;
+}
+
+.pic img {
+  width: 100%;
+  margin: 1rem;
+}
+
+.details {
+  width: 65%;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#grey {
+  background: lightgrey;
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    margin: 0;
+  }
+  .image {
+    width: 100%;
+  }
+
+  .description {
+    width: 90%;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  .pic {
+    width: 90%;
+  }
+
+  .pic img {
+    height: 250px;
+  }
+
+  .details {
+    width: 90%;
+    margin-top: 0.2rem;
+    margin-bottom: 2rem;
+  }
+
+}
+
+/******** HEADER *******/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  /*margin-left: 24px;
+  margin-right: 24px;*/
+  position: fixed;
+  z-index: 100;
+  background: white;
+  width: 100%;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+
+header span {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+header span .grey {
+  color: grey;
+}
+
+header nav {
+  margin-right: 24px;
+}
+
+header ul li{
+  display: inline-block;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+header ul li:first-child, header ul li:nth-child(2), header ul li:nth-child(3) {
+  border-right: 16px solid lightblue;
+
+}
+
+header ul a {
+  text-decoration: none;
+}
+
+header ul a:hover {
+  width: 300px;	height: 100px;	background-color: #A2A3A5;	position: relative;
+  color: white;
+}
+
+header .mobile-header {
+  display: none;
+}
+
+@media only screen and (max-width: 450px) {
+  header .logo, header nav {
+    display: none;
+  }
+
+  header .mobile-header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+/***** JUMBOTRON ********/
+.jumbotron .image, .jumbotron .description {
+  margin-top: 64px;
+}
+
+.jumbotron .description {
+  justify-content: center;
+}
+
+.jumbotron .description h1, .jumbotron .description p, .jumbotron .description a {
+  width: 70%;
+}
+
+.jumbotron h1, .jumbotron p {
+  margin-bottom: 1.5rem;
+}
+
+.jumbotron .description p:nth-child(3)  {
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+  color: white;
+}
+
+.jumbotron .description a {
+  color: white;
+  margin: 8px auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+  .jumbotron .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .jumbotron .image img {
+    margin-top: -2rem;
+  }
+
+  .jumbotron .description {
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    text-align: center;
+  }
+
+  .jumbotron .description h1, .jumbotron .description p, .jumbotron .description a {
+    width: 90%;
+  }
+}
+
+/***** Supporting-section-1 *****/
+
+.supporting-section-1 .description {
+  margin-top: -1rem;
+}
+
+.supporting-section-1 .image img {
+  margin-bottom: 2rem;
+}
+
+.supporting-section-1 a {
+  color: blue;
+}
+
+@media only screen and (max-width: 450px) {
+  .supporting-section-1 .image {
+    display: none;
+  }
+
+  .supporting-section-1 #grey.info {
+    background: #fff;
+  }
+
+  .supporting-section-1 p br {
+    display: none;
+  }
+}
+
+/**** CONTENT *************/
+
+.content h2 {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.courses {
+  display: flex;
+  margin: 32px 72px;
+}
+
+.courses .course-col {
+  display: flex;
+  flex-direction: column;
+  max-width: 33.33%
+}
+
+.courses .course-col .course-item {
+  width: 100%;
+}
+
+.courses .course-item img {
+  width: 100%;
+}
+
+#between-horizontal {
+  margin-right: 2rem;
+}
+
+#between-vertical {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.course-description {
+  background: white;
+  padding: 16px;
+}
+
+.course-description h3 {
+  color: #000;
+  font-weight: 600;
+}
+
+.special {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.mobile-list {
+  display: none;
+}
+
+.mobile-list ul {
+  display: inline-block;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.mobile-list li {
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 24px;
+  border-radius: 10px;
+}
+
+.mobile-list a {
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 450px) {
+
+  #grey.content {
+    background: white;
+  }
+
+  .content .courses {
+    display: none;
+  }
+
+  .mobile-list {
+    display: block;
+  }
+}
+
+/***** Supporting-section-2 *********/
+
+.supporting-section-2 h2 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.supporting-section-2 .description {
+  /*margin-top: -1rem;*/
+  justify-content: flex-start;
+}
+
+.supporting-section-2 .image h2 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 450px) {
+
+  .supporting-section-2 .description {
+    display: none;
+  }
+
+  .supporting-section-2 .image h2, .supporting-section-2 .image p {
+    display: none;
+  }
+
+  .supporting-section-2 .image {
+    margin-top: -2rem;
+    margin-bottom: 24px;
+  }
+}
+ /***** FOOTER ***********/
+
+ footer {
+   display: flex;
+   justify-content: space-between;
+   margin-left: 24px;
+   margin-right: 24px;
+   border-top: 1px solid grey;
+   padding-top: 1rem;
+   padding-bottom: 3rem;
+ }
+
+ footer li {
+   display: inline-block;
+ }
+
+ @media only screen and (max-width: 450px) {
+   footer {
+     border: none;
+   }
+
+   footer ul {
+     display: none;
+   }
+ }
